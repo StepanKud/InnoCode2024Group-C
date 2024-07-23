@@ -19,7 +19,7 @@ typedef vector<pair<ll, ll>> vpl;
 typedef vector<vector<ll>> vvl;
 typedef vector<ll> vl;
 
-ll main() {
+int main() {
 	ios::sync_with_stdio(0);//passively speeds up code
 	cin.tie(0);//passively speeds up code
 	cout.tie(0);//passively speeds up code
