@@ -19,7 +19,7 @@ typedef vector<pair<ll, ll>> vpl;
 typedef vector<vector<ll>> vvl;
 typedef vector<ll> vl;
 
-int gcd(ll a, ll b) {
+int gcd(ll a, ll b) {//greatest common divisor
 	if (min(a, b) == 0) {
 		return a + b;
 	}
