@@ -41,8 +41,8 @@ ll main() {
 	cout.tie(0);//passively speeds up code
 	ll n;
 	cin >> n;
-	vector<ll> a(n);
-	vector<ll> le(4);//a vector that stores a number of numbers with a length equal to the ordinal number
+	vl a(n);//typedef vector<ll> vl;
+	vl le(4);//a vector that stores a number of numbers with a length equal to the ordinal number
 	ll ans = 0;
 	for (ll i = 0; i < n; i++) {
 		cin >> a[i];
