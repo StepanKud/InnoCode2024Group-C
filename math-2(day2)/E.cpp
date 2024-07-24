@@ -44,12 +44,10 @@ int main() {
 		if (i > 0) {
 			p[i] = nok(p[i], p[i - 1]);
 		}
-	}
-	if (p[n - 1] + a > k) {
+	}if (p[n - 1] + a > k) {
 		cout << "No";
-	}
-	else {
-		cout << "Yes" << '\n';
+	}else {
+		cout << "Yes" << '\n';//'\n' is better than endl
 		cout << a + p[n - 1];
 	}
 }
