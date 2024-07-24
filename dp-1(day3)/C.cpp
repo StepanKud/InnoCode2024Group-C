@@ -20,25 +20,29 @@ typedef vector<vector<ll>> vvl;
 typedef vector<ll> vl;
 
 int main() {
-	ios::sync_with_stdio(0);//passively speeds up code
-	cin.tie(0);//passively speeds up code
-	cout.tie(0);//passively speeds up code
+    ios::sync_with_stdio(0);//passively speeds up code
+    cin.tie(0);//passively speeds up code
+    cout.tie(0);//passively speeds up code
     ll n, k; cin >> n >> k;
     vl a(n);
-    for (ll i = 1; i < n - 1; i++)
+    for (ll i = 1; i < n - 1; i++){
         cin >> a[i];
+    }
     vl dp(n);
     vl parent(n, -1);
     for (ll i = 1; i < n; i++) {
         ll mx = -1000000000;
-        for (ll j = 1; j <= k; j++)
-            if (i < j)
+        for (ll j = 1; j <= k; j++){
+            if (i < j){
                 break;
+	    }
             else {
                 mx = max(mx, dp[i - j]);
-                if (dp[i - j] == mx)
+                if (dp[i - j] == mx){
                     parent[i] = i - j;
+		}
             }
+	}
         dp[i] = mx + a[i];
     }
     cout << dp[n - 1] << '\n';
@@ -49,7 +53,7 @@ int main() {
         ind = parent[ind];
         path.push_back(ind);
     }
-    cout << path.size() - 1 << '\n';
+    cout << path.size() - 1 << '\n';//'\n' is better than endl
     for (ll i = (ll)path.size() - 1; i >= 0; i--)
         cout << path[i] + 1 << " ";
 }
