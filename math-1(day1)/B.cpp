@@ -20,9 +20,9 @@ typedef vector<vector<ll>> vvl;
 typedef vector<ll> vl; 
  
 int main() { 
-  ios::sync_with_stdio(0); 
-  cin.tie(0); 
-  cout.tie(0); 
+  ios::sync_with_stdio(0); //passively speeds up code
+  cin.tie(0); //passively speeds up code
+  cout.tie(0); //passively speeds up code
   ll n, b; 
   cin >> n >> b; 
   vector<bool> a(b + 1, true); 
